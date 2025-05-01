@@ -29,6 +29,9 @@
             "projectReferences": {
               "/Volumes/T7/Workspace/NETProjects/ASP.NET/Assignment/Alpha/Backend/Data/Data.csproj": {
                 "projectPath": "/Volumes/T7/Workspace/NETProjects/ASP.NET/Assignment/Alpha/Backend/Data/Data.csproj"
+              },
+              "/Volumes/T7/Workspace/NETProjects/ASP.NET/Assignment/Alpha/Backend/Domain/Domain.csproj": {
+                "projectPath": "/Volumes/T7/Workspace/NETProjects/ASP.NET/Assignment/Alpha/Backend/Domain/Domain.csproj"
               }
             }
           }
