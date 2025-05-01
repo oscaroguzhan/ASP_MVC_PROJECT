@@ -1,5 +1,7 @@
 using Data.Contexts;
 using Data.Entities;
+using Data.Interfaces;
+using Data.Repositories;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Rewrite;
 using Microsoft.EntityFrameworkCore;
@@ -28,6 +30,11 @@ builder.Services.ConfigureApplicationCookie(options =>
     options.Cookie.Expiration = TimeSpan.FromDays(1);
     options.SlidingExpiration = true;
 });
+
+builder.Services.AddScoped<IClientRepository, ClientRepository>();
+builder.Services.AddScoped<IProjectRepository, ProjectRepository>();
+builder.Services.AddScoped<IUserRepository, UserRepository>();
+builder.Services.AddScoped<IStatusRepository, StatusRepository>();
 
 var app = builder.Build();
 
