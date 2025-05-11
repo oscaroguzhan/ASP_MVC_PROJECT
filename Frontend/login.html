@@ -11,29 +11,23 @@
 <body>
     <div class="center-wrapper">
         <main>
-            <section id="login">
+            <section id="signup">
                 <div class="card">
                     <div class="card-header">
-                        <h1>Create Account</h1>
+                        <h1>Log in</h1>
                     </div>
                     <div class="card-body">
                         <form method="post" asp-controller="" asp-action="" novalidate>
                             <button class="btn-external" type="submit" >
                                 <img src="images/google-icon.svg" alt="icon" />
-                                <span class="external-span">Sign up with Google</span>
+                                <span class="external-span">Log in in with Google</span>
                             </button>
                         </form>
                         <div class="or-divider">
                             or
                         </div>
                         <form method="post" asp-controller="" asp-action="" novalidate >
-                        <div class="form-group">
-                            <label for="firstname">First Name</label>
-                            <input class="form-input" type="text" name="firstname" id="firstname" placeholder="Enter your name"/> 
-                        </div>
-                        <div class="form-group">
-                            <label for="lastname">Last Name</label>
-                            <input class="form-input" type="text" name="lastname" id="lastname" placeholder="Enter your last name"/>
+                       
                         <div class="form-group">
                             <label for="email">Email</label>
                             <input class="form-input" type="email" name="email" id="email" placeholder="Enter your email"/>                            
@@ -42,23 +36,20 @@
                             <label for="password">Password</label>
                             <input class="form-input" type="password" name="password" id="password" placeholder="Enter your password"/>
                         </div>
-                        <div class="form-group">
-                            <label for="confirm-password">Confirm Password</label>
-                            <input class="form-input" type="password" name="confirm-password" id="confirm-password" placeholder="Confirm your password"/>
-                        </div>
+                       
                         <div class="form-checkbox-group">
                             <label for="" class="form-checkbox">
-                                <input type="checkbox" name="terms" id="terms" class="form-checkbox-input"/>
+                                <input type="checkbox" name="terms" id="persistent-checkbox" class="form-checkbox-input"/>
                                 <span class="form-checkbox-custom"></span>
                             </label>
-                            <label for="" class="form-label">I agree to the <a href="#">Terms and Conditions</a></label>
+                            <label for="persistent-checkbox" class="form-label">Remember me</label>
                         </div>
                         <button class="btn" type="submit">
-                            <span class="btn-span">Create Account</span>
+                            <span class="btn-span">Log in</span>
                         </button>
                     </form>
                     <div class="card-footer">
-                        Already have an account? <a href="login.html">Log in</a>
+                        Don't have an account? <a href="signup.html">Sign up</a>
                     </div>
                 </div>
             </section>
