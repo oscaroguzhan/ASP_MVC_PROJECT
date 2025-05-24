@@ -1,32 +1,107 @@
-document.querySelectorAll('.form-select').forEach((select) => {
-    const trigger = select.querySelector('.form-select-trigger');
-    const triggerText = select.querySelector('.form-select-trigger-text');
-    const options = select.querySelectorAll('.form-select-option');
-    const hiddenInput = select.querySelector('input[type="hidden"]');
-    const placeholder = select.dataset.placeholder || 'Select an option';
+function initializeImageUpload(uploadTriggerId, fileInputId, imagePreviewId, imagePreviewIconContainerId, imagePreviewIconId) {
+    const uploadTrigger = document.getElementById(uploadTriggerId);
+    const fileInput = document.getElementById(fileInputId);
+    const imagePreview = document.getElementById(imagePreviewId);
+    const imagePreviewIconContainer = document.getElementById(imagePreviewIconContainerId);
+    const imagePreviewIcon = document.getElementById(imagePreviewIconId);
 
-    const setValue = (value = '', text = placeholder) => {
-        hiddenInput.value = value;
-        triggerText.textContent = text;
-        select.classList.toggle('has-placeholder', !value);
-    }
-    setValue();
-    trigger.addEventListener('click', (e) => {
-        e.stopPropagation();
-        document.querySelectorAll('.form-select.open').forEach(el =>  el !== select && el.classList.remove('open'));
-        select.classList.toggle('open');
+    uploadTrigger.addEventListener('click', () => {
+        fileInput.click();
     });
 
-    options.forEach((option) => {
-        option.addEventListener('click', (e) => {
+    fileInput.addEventListener('change', (e) => {
+        const file = e.target.files[0];
+        
+        if (file && file.type.startsWith('image/')) {
+            const reader = new FileReader();
+            
+            reader.onload = (event) => {
+                imagePreview.src = event.target.result;
+                imagePreview.classList.remove('hide');
+                imagePreviewIconContainer.classList.add('selected');
+                imagePreviewIcon.classList.remove('fa-camera');
+                imagePreviewIcon.classList.add('fa-pen-square');
+                uploadTrigger.classList.remove('hide');
+            };
+            
+            reader.onerror = () => {
+                console.error('Error reading image file');
+            };
+            
+            reader.readAsDataURL(file);
+        } else if (file) {
+            console.warn('Selected file is not an image');
+            // Optional: Show error message to user
+        }
+    });
+}
+
+// Initialize the image upload for your project form
+document.addEventListener('DOMContentLoaded', () => {
+    initializeImageUpload('upload-trigger', 'image-upload', 'image-preview', 'image-preview-icon-container', 'image-preview-icon');
+    
+    // You can initialize multiple image uploads by calling this function with different IDs
+    // initializeImageUpload('another-upload-trigger', 'another-image-upload', 'another-image-preview');
+});
+document.addEventListener('DOMContentLoaded', () => {
+    const dropdownButtons = document.querySelectorAll('[data-type="dropdown"]');
+
+    dropdownButtons.forEach(button => {
+        button.addEventListener('click', (e) => {
             e.stopPropagation();
-            const value = option.dataset.value;
-            const text = option.textContent;
-            setValue(value, text);
-            select.classList.remove('open');
+            const targetSelector = button.getAttribute('data-target') + '-dropdown';
+            const targetDropdown = document.querySelector(targetSelector);
+
+            // Close all other dropdowns
+            document.querySelectorAll('.dropdown').forEach(dropdown => {
+                if (dropdown !== targetDropdown) {
+                    dropdown.classList.add('hide');
+                }
+            });
+
+            // Toggle current dropdown
+            targetDropdown.classList.toggle('hide');
         });
     });
+
+    // Close dropdowns when clicking outside
     document.addEventListener('click', () => {
-        select.classList.remove('open');
+        document.querySelectorAll('.dropdown').forEach(dropdown => {
+            dropdown.classList.add('hide');
+        });
     });
-})
+});
+
+
+const modals = document.querySelectorAll('[data-type="modal"]');
+modals.forEach((modal) => {
+    modal.addEventListener('click', (e) => {
+        const targetId = modal.getAttribute('data-target');
+        const targetModal = document.querySelector(targetId);
+        targetModal.classList.add('modal-show');
+    })
+});
+
+const closeButtons = document.querySelectorAll('[data-type="close"]');
+closeButtons.forEach((button) => {
+    button.addEventListener('click', (e) => {
+        const targetId = button.getAttribute('data-target');
+        const targetModal = document.querySelector(targetId);
+        targetModal.classList.remove('modal-show');
+    })
+});
+
+ // Initialize form selects
+    const initFormSelects = () => {
+        document.querySelectorAll('.form-select').forEach(select => {
+            select.addEventListener('change', (e) => {
+                const wrapper = e.target.closest('.form-select-wrapper');
+                if (e.target.value) {
+                    wrapper.classList.remove('has-placeholder');
+                } else {
+                    wrapper.classList.add('has-placeholder');
+                }
+            });
+        });
+    };
+
