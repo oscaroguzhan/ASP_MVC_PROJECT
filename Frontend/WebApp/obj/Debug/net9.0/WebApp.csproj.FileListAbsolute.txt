@@ -16,7 +16,6 @@
 /Volumes/T7/Workspace/NETProjects/ASP.NET/Assignment/Alpha/Frontend/WebApp/obj/Debug/net9.0/WebApp.RazorAssemblyInfo.cs
 /Volumes/T7/Workspace/NETProjects/ASP.NET/Assignment/Alpha/Frontend/WebApp/obj/Debug/net9.0/WebApp.sourcelink.json
 /Volumes/T7/Workspace/NETProjects/ASP.NET/Assignment/Alpha/Frontend/WebApp/obj/Debug/net9.0/scopedcss/bundle/WebApp.styles.css
-/Volumes/T7/Workspace/NETProjects/ASP.NET/Assignment/Alpha/Frontend/WebApp/obj/Debug/net9.0/compressed/fspdjdrw69-l57xw03w72.gz
 /Volumes/T7/Workspace/NETProjects/ASP.NET/Assignment/Alpha/Frontend/WebApp/obj/Debug/net9.0/compressed/15ykilufbm-61n19gt1b8.gz
 /Volumes/T7/Workspace/NETProjects/ASP.NET/Assignment/Alpha/Frontend/WebApp/obj/Debug/net9.0/compressed/6oal8xgknh-8dg1ywlrdr.gz
 /Volumes/T7/Workspace/NETProjects/ASP.NET/Assignment/Alpha/Frontend/WebApp/obj/Debug/net9.0/compressed/fy3xppfiwv-mnql2dr8ug.gz
@@ -38,3 +37,4 @@
 /Volumes/T7/Workspace/NETProjects/ASP.NET/Assignment/Alpha/Frontend/WebApp/obj/Debug/net9.0/WebApp.pdb
 /Volumes/T7/Workspace/NETProjects/ASP.NET/Assignment/Alpha/Frontend/WebApp/obj/Debug/net9.0/WebApp.genruntimeconfig.cache
 /Volumes/T7/Workspace/NETProjects/ASP.NET/Assignment/Alpha/Frontend/WebApp/obj/Debug/net9.0/ref/WebApp.dll
+/Volumes/T7/Workspace/NETProjects/ASP.NET/Assignment/Alpha/Frontend/WebApp/obj/Debug/net9.0/compressed/fspdjdrw69-9qje8bimkf.gz

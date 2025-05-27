@@ -438,6 +438,12 @@ html, body {
         font-size: 18px;
         font-weight: 700;
     }
+
+    .text-danger {
+        color: var(--red);
+        font-size: 0.8rem;
+
+    }
     p {
         font-size: 16px;
         font-weight: 400;
