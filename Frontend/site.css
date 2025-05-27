@@ -23,9 +23,9 @@
   
     --yellow-light: #FFFFC7;
     --yellow-semilight: #FFF3B4;
-    --yellow: #6C6102;
+    --yellow: #cfbd16;
     --yellow-dark: #B87400;
-  
+    
     --red-light: #FFFEA4;
     --red-semilight: #FFB8A5;
     --red: #DE3434;
@@ -68,6 +68,22 @@
   --dot-red-background-color: var(--red);
   --dot-yellow-background-color: var(--yellow);
   --dot-green-background-color: var(--green);
+
+  /* badges */
+  --badge-red-background-color: var(--red);
+  --badge-warning-background-color: var(--yellow);
+  --badge-danger-background-color: var(--red-semilight);
+  --badge-normal-background-color: var(--gray-300);
+
+  --badge-red-text-color: var(--white-100);
+  --badge-warning-text-color: var(--dark-400);
+  --badge-danger-text-color: var(--red);
+  --badge-normal-text-color: var(--dark-400);
+
+  --badge-red-border-color: var(--white-100);
+  --badge-warning-border-color: var(--white-100);
+  --badge-danger-border-color: var(--red-semilight);
+  --badge-normal-border-color: var(--gray-100);
 
     /* shapes */
     --circle-gray-text-color: var(--white-100);
@@ -180,6 +196,52 @@
 --user-notification-text-muted-color: var(--gray-680);
 --user-notification-background-hover-color: var(--blue-light-opacity);
 
+/* quill editor styles */
+
+.wysiwyg-editor {
+    width: 100%;
+    border:none;
+    border-bottom: 1px solid var(--gray-300);
+    margin-bottom: 1rem;
+}
+
+.wysiwyg-toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    border: none !important;
+    margin-bottom: 1rem;
+}
+
+.ql-toolbar button {
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    
+}
+
+.ql-toolbar button:hover {
+    background-color: var(--gray-100);
+}
+
+.ql-toolbar button.ql-active {
+    background-color: var(--blue-light);
+}
+
+.ql-editor {
+    min-height: 100px;
+    padding: 1rem;
+    font-family: var(--font-standard);
+    color: var(--dark-400);
+}
+
+.ql-editor.ql-blank::before {
+    color: var(--gray-500);
+    font-style: normal;
+    left: 1rem;
+}
 
 html, body {
     font-family: var(--font-standard);
@@ -232,10 +294,10 @@ html, body {
         height: 100%;
         display: none;
         justify-content: center;
-        align-items: center;
+        align-items: flex-start;
         background-color: var(--modal-background-color);
         z-index: 8999;
-
+        padding: 2rem 0;
         .btn-close {
             z-index: 9999;
         }
@@ -252,8 +314,8 @@ html, body {
         padding: 1.2rem 1rem 1.2rem 1.5rem;
         border-radius: var(--border-radius);
         box-shadow: var(--box-shadow);
-        width: 600px;
-        
+        width: 320px;
+        height: fit-content;
         
     }
     .card-header {
@@ -261,9 +323,12 @@ html, body {
         justify-content: space-between;
         align-items: center;
         margin-bottom: 2rem;
+        width: 100%;
     }
     .card-body {
        margin: 0 3rem;
+       min-height: 100px;
+       
     }
     .card-footer {
        margin-top: 2rem;
@@ -282,6 +347,16 @@ html, body {
      
         
         
+    }
+    .project-dropdown {
+        position: absolute;
+        left: 150px;
+        top: 180px;
+        background-color: var(--white-300);
+        border: 1px solid var(--card-border-color);
+        color: var(--card-text-color);
+        border-radius: var(--border-radius);
+        box-shadow: var(--box-shadow);
     }
     .dropdown-header {
         display: flex;
@@ -313,7 +388,21 @@ html, body {
                 color: var(--navlink-text-hover-color);
                 background-color: var(--navlink-background-hover-color);
             }
+            &.edit, &.addMember {
+                border: none;
+                width: 100%;
+                
+            }
+            
+            
         }
+        
+        .delete {
+        color: red !important;
+        font-size: 0.9rem;
+        }
+    
+
     }
     h1, h2, h3, h4, h5, h6 {
         color: var(--text-heading-color);
@@ -450,7 +539,7 @@ html, body {
         display: flex;
         align-items: center;
         justify-content: center;
-        margin: 2rem 0;
+        margin: 0.5rem 0;
         text-transform: uppercase;
         font-size: 0.8rem;
         font-weight: 200;
@@ -471,8 +560,29 @@ html, body {
             margin-left: 0.5rem;
         }
     }
+
+    .btn-actions {
+        border: 1px solid var(--btn-close-border-color);
+        color: var(--btn-close-text-color);
+        cursor: pointer;
+        background-color: var(--btn-close-background-color);
+        z-index: 999;
+        font-size: 1.4rem;
+        border-radius: var(--border-radius);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        &:hover {
+            color: var(--btn-close-text-hover-color);
+            border: 1px solid var(--btn-close-hover-border-color);
+            background-color: var(--btn-close-hover-background-color);
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+    }
     
-    .image-preview-container {
+    .image-preview-container, .image-preview-container-2 {
         display:flex;
         justify-content: center;
         align-items: center;
@@ -493,7 +603,7 @@ html, body {
         }
         
     }
-    #image-upload {
+    #image-upload, #image-upload-2 {
         display: none;
     }
     /* shapes */
@@ -839,9 +949,24 @@ html, body {
         padding: 0.2rem 0.5rem;
 
         &.badge-red {
-            color: var(--white-100);
-            border: 1px solid var(--dot-red-background-color);
-            background-color: var(--dot-red-background-color);
+            color: var(--badge-red-text-color);
+            border: 1px solid var(--badge-red-border-color);
+            background-color: var(--badge-red-background-color);
+        }
+        &.badge-normal {
+            color: var(--badge-normal-text-color);
+            border: 1px solid var(--badge-normal-border-color);
+            background-color: var(--badge-normal-background-color);
+        }
+        &.badge-danger {
+            color: var(--badge-danger-text-color);
+            border: 1px solid var(--badge-danger-border-color);
+            background-color: var(--badge-danger-background-color);
+        }
+        &.badge-warning {
+            color: var(--badge-warning-text-color);
+            border: 1px solid var(--badge-warning-border-color);
+            background-color: var(--badge-warning-background-color);
         }
     }
     .dropdown-show {
@@ -1044,13 +1169,102 @@ html, body {
             margin-top: 2rem;
         }
     }
-
-    #add-project-modal .card {
+    
+    #add-project-modal .card, #edit-project-modal .card {
         width: 550px;
-
+        max-height: calc(100vh - 2rem);
+        overflow-y: auto;
+        margin: 1rem auto;
+        
+        
         .btn {
             margin-top:1rem;
         }
     }
 
+    #projects {
+        
+        display: grid;
+        gap: 3rem;
+        width: 100%;
+        
+
+        .project-list {
+            
+            display:grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+
+        }
+        .project {
+            &.card {
+                
+                .card-header {
+                    
+                    display:grid;
+                    width: 100%;
+                    grid-template-columns: auto 1fr auto;
+                    grid-template-areas: "img name action" "img client na";
+                    align-items: center;
+                    column-gap: 0.5rem;
+
+                    .project-image {
+                        grid-area: img;
+                        width: 56px;
+                        height: 56px;
+                        overflow: hidden;
+                        border-radius: var(--border-radius);
+                        
+
+                        img {
+                            width: 56px;
+                            height: 56px;
+                            object-fit: contain;
+                        }
+                    }
+                    .project-name {
+                        grid-area: name;
+                    }
+                    .client {
+                        grid-area: client;
+                        color: var(--text-muted-semilight-color);
+                    }
+                    .project-actions {
+                        grid-area: action;
+                        
+                    }
+                }
+
+                .card-body {
+                    margin: 1rem 0;
+                }
+                .card-footer {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    
+                    .badge-span {
+                        font-size: 0.9rem;
+                        padding: 0.25rem;
+                    }
+                }
+                &#projects-actions-container {
+                    position: relative;
+                }
+            }
+        }
+        .members {
+            display:flex;
+            gap: 0.5rem;
+            align-items: center;
+            .user-image {
+                grid-area: img;
+                img {
+                    width: 32px;
+                    height: 32px
+                }
+            }
+        }
+    }
+    
     
