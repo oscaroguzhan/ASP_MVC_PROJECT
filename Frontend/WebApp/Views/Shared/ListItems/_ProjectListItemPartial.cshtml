@@ -1,16 +1,17 @@
-﻿<div class="project card" data-project-id="1">
+﻿@model ProjectViewModel  
+<div class="project card" data-project-id="@Model.Id">
     <div class="card-header">
         <div class="project-image">
-            <img src="/images/Image.svg" alt="project" />
+            <img src="@Model.ProjectImage" alt="project" />
         </div>
-        <h6 class="project-name">Website Redesign</h6>
-        <span class="client">GitLab Inc.</span>
+        <h6 class="project-name">@Model.ProjectName</h6>
+        <span class="client">@Model.ClientName</span>
 
         <div id="projects-actions-container">
-            <button type="button" class="btn-actions" data-type="dropdown" data-target="#project-dropdown-1">
+            <button type="button" class="btn-actions" data-type="dropdown" data-target="#project-dropdown-@Model.Id">
                 <i class="fa-solid fa-ellipsis"></i>
             </button>
-            <div id="project-dropdown-1" class="project-dropdown hide">
+            <div id="project-dropdown-@Model.Id" class="project-dropdown hide">
                 <div class="dropdown-body">
                     <nav class="dropdown-actions">
                         <button class="dropdown-action edit" data-type="modal" data-target="#edit-project-modal">
@@ -38,12 +39,12 @@
         </div>
     </div>
     <div class="card-body">
-        <p>It is necessary to design a new website for the company.</p>
+        <p>@Html.Raw(Model.Description)</p>
     </div>
     <div class="card-footer">
         <div class="badge badge-normal">
             <i class="fa-duotone fa-solid fa-clock"></i>
-            <span class="badge-span">2 days left</span>
+            <span class="badge-span">@Model.TimeLeft</span>
         </div>
         <div class="members">
             <div class="user-image">

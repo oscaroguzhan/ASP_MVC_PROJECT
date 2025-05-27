@@ -1,5 +1,9 @@
+@model ProjectsViewModel
+
 @{
     ViewData["Title"] = "Projects";
+
+    
 }
 
 <div id="projects" class="page">
@@ -11,11 +15,17 @@
         </button>
     </div>
     <section class="project-list">
-       @await Html.PartialAsync("ListItems/_ProjectListItemPartial")
-       
+        @if(Model.Projects != null && Model.Projects.Any())
+        {
+            foreach (var project in Model.Projects)
+            {
+                @await Html.PartialAsync("ListItems/_ProjectListItemPartial", project)
+            }
+        }
+        
     </section>
 </div>
 
 <!-- Include modals -->
-@await Html.PartialAsync("Modals/_AddProjectModalPartial")
-@await Html.PartialAsync("Modals/_EditProjectModalPartial")
+@await Html.PartialAsync("Modals/_AddProjectModalPartial", Model.AddProjectFormData)
+@await Html.PartialAsync("Modals/_EditProjectModalPartial", Model.EditProjectFormData)
