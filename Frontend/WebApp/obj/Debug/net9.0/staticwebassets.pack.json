@@ -1,0 +1,57 @@
+{
+  "Files": [
+    {
+      "Id": "/Volumes/T7/Workspace/NETProjects/ASP.NET/Assignment/Alpha/Frontend/WebApp/wwwroot/css/site.css",
+      "PackagePath": "staticwebassets/css/site.css"
+    },
+    {
+      "Id": "/Volumes/T7/Workspace/NETProjects/ASP.NET/Assignment/Alpha/Frontend/WebApp/wwwroot/favicon.ico",
+      "PackagePath": "staticwebassets/favicon.ico"
+    },
+    {
+      "Id": "/Volumes/T7/Workspace/NETProjects/ASP.NET/Assignment/Alpha/Frontend/WebApp/wwwroot/images/Image.svg",
+      "PackagePath": "staticwebassets/images/Image.svg"
+    },
+    {
+      "Id": "/Volumes/T7/Workspace/NETProjects/ASP.NET/Assignment/Alpha/Frontend/WebApp/wwwroot/images/alpha_logo.svg",
+      "PackagePath": "staticwebassets/images/alpha_logo.svg"
+    },
+    {
+      "Id": "/Volumes/T7/Workspace/NETProjects/ASP.NET/Assignment/Alpha/Frontend/WebApp/wwwroot/images/google-icon.svg",
+      "PackagePath": "staticwebassets/images/google-icon.svg"
+    },
+    {
+      "Id": "/Volumes/T7/Workspace/NETProjects/ASP.NET/Assignment/Alpha/Frontend/WebApp/wwwroot/images/user_avatar.svg",
+      "PackagePath": "staticwebassets/images/user_avatar.svg"
+    },
+    {
+      "Id": "/Volumes/T7/Workspace/NETProjects/ASP.NET/Assignment/Alpha/Frontend/WebApp/wwwroot/images/user_avatar2.svg",
+      "PackagePath": "staticwebassets/images/user_avatar2.svg"
+    },
+    {
+      "Id": "/Volumes/T7/Workspace/NETProjects/ASP.NET/Assignment/Alpha/Frontend/WebApp/wwwroot/js/site.js",
+      "PackagePath": "staticwebassets/js/site.js"
+    },
+    {
+      "Id": "obj/Debug/net9.0/staticwebassets/msbuild.WebApp.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj/Debug/net9.0/staticwebassets/msbuild.WebApp.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj/Debug/net9.0/staticwebassets/msbuild.build.WebApp.props",
+      "PackagePath": "build\\WebApp.props"
+    },
+    {
+      "Id": "obj/Debug/net9.0/staticwebassets/msbuild.buildMultiTargeting.WebApp.props",
+      "PackagePath": "buildMultiTargeting\\WebApp.props"
+    },
+    {
+      "Id": "obj/Debug/net9.0/staticwebassets/msbuild.buildTransitive.WebApp.props",
+      "PackagePath": "buildTransitive\\WebApp.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

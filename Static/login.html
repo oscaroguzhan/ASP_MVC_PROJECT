@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://kit.fontawesome.com/a576612222.css" crossorigin="anonymous"></link>
+    <link rel="stylesheet" href="site.css">
+    <title>login Alpha Frontend</title>
+</head>
+<body>
+    <div class="center-wrapper">
+        <main id="center-main">
+            <section id="signup">
+                <div class="card">
+                    <div class="card-header">
+                        <h1>Log in</h1>
+                    </div>
+                    <div class="card-body">
+                        <form method="post" asp-controller="" asp-action="" novalidate>
+                            <button class="btn-external" type="submit" >
+                                <img src="images/google-icon.svg" alt="icon" />
+                                <span class="external-span">Log in in with Google</span>
+                            </button>
+                        </form>
+                        <div class="or-divider">
+                            or
+                        </div>
+                        <form method="post" asp-controller="" asp-action="" novalidate >
+                       
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input class="form-input" type="email" name="email" id="email" placeholder="Enter your email"/>                            
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input class="form-input" type="password" name="password" id="password" placeholder="Enter your password"/>
+                        </div>
+                       
+                        <div class="form-checkbox-group">
+                            <label for="" class="form-checkbox">
+                                <input type="checkbox" name="terms" id="persistent-checkbox" class="form-checkbox-input"/>
+                                <span class="form-checkbox-custom"></span>
+                            </label>
+                            <label for="persistent-checkbox" class="form-label">Remember me</label>
+                        </div>
+                        <button class="btn" type="submit">
+                            <span class="btn-span">Log in</span>
+                        </button>
+                    </form>
+                    <div class="card-footer">
+                        Don't have an account? <a href="signup.html">Sign up</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="site.js"></script>
+   
+</body>
+</html>

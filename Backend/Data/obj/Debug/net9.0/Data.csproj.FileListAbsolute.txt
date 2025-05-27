@@ -12,3 +12,7 @@
 /Volumes/T7/Workspace/NETProjects/ASP.NET/Assignment/Alpha/Backend/Data/obj/Debug/net9.0/Data.pdb
 /Volumes/T7/Workspace/NETProjects/ASP.NET/Assignment/Alpha/Backend/Data/obj/Debug/net9.0/Data.genruntimeconfig.cache
 /Volumes/T7/Workspace/NETProjects/ASP.NET/Assignment/Alpha/Backend/Data/obj/Debug/net9.0/ref/Data.dll
+/Volumes/T7/Workspace/NETProjects/ASP.NET/Assignment/Alpha/Backend/Data/bin/Debug/net9.0/Domain.dll
+/Volumes/T7/Workspace/NETProjects/ASP.NET/Assignment/Alpha/Backend/Data/bin/Debug/net9.0/Domain.pdb
+/Volumes/T7/Workspace/NETProjects/ASP.NET/Assignment/Alpha/Backend/Data/obj/Debug/net9.0/Data.sourcelink.json
+/Volumes/T7/Workspace/NETProjects/ASP.NET/Assignment/Alpha/Backend/Data/obj/Debug/net9.0/Data.csproj.Up2Date
