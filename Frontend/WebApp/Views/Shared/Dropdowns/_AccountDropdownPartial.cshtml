@@ -1,0 +1,33 @@
+﻿<div id="account-container">
+    <button type="button" class="btn-account" data-type="dropdown" data-target="#account-dropdown">
+        <img src="/images/user_avatar.svg" alt="user" class="user-avatar" />
+    </button>
+    <div id="account-dropdown" class="dropdown hide">
+        <div class="dropdown-header">
+            <div class="account-name">
+                <img src="/images/user_avatar.svg" alt="account-avatar">
+                <span class="account-name-span">John Doe</span>
+            </div>
+        </div>
+        <div class="dropdown-body">
+            <div class="dropdown-options">
+                <div class="dropdown-option">
+                    <label class="switch-label" for="darkModeToggle">
+                        <i class="fa-duotone fa-solid fa-cog"></i>
+                        <span>Dark mode</span>
+                    </label>
+                    <label class="switch">
+                        <input type="checkbox" id="darkModeToggle" data-type="toggle" data-func="darkmode" />
+                        <span class="slider"></span>
+                    </label>
+                </div>
+            </div>
+            <div class="or-divider"></div>
+            <nav class="dropdown-actions">
+                <a href="#" class="dropdown-action">
+                    <i class="fa-duotone fa-solid fa-right-from-bracket"></i>
+                    <span class="account-logout-span">Log out</span>
+                </a>
+            </nav>
+        </div>
+    </div>

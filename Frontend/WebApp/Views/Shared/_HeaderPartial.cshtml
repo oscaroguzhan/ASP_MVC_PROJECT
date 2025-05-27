@@ -4,60 +4,6 @@
         <i class="fa-solid fa-magnifying-glass"></i>
         <input type="search" name="search" placeholder="Search..." class="form-search-input"/>
     </form>
-    <div id="notification-container">
-        <button type="button" class="btn-notification" data-type="dropdown" data-target="#notification-dropdown">
-            <i class="dot dot-red fa-solid fa-circle hide"></i>
-            <i class="fa-duotone fa-solid fa-bell" style="--fa-primary-opacity: 0.4; --fa-secondary-opacity: 1;"></i>
-        </button>
-        <div id="notification-dropdown" class="dropdown hide">
-            <div class="dropdown-header">
-                <h5>Notifications</h5>
-            <div class="badge badge-red">0</div>
-        </div>
-        <div class="or-divider"></div>
-            <div class="notifications">
-                <div class="notification" data-notification-type="user">
-                    <div class="user-image">
-                        <img src="images/user_avatar.svg" alt="user" />
-                    </div>
-                    <span class="message">John Doe sign in.</span>
-                    <span class="time">2 hours ago</span>
-                    <button class="btn-close"></button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div id="account-container">
-        <button type="button" class="btn-account" data-type="dropdown" data-target="#account-dropdown">
-            <img src="images/user_avatar.svg" alt="user" class="user-avatar" />
-        </button>
-        <div id="account-dropdown" class="dropdown hide" >
-            <div class="dropdown-header">
-                <div class="account-name">
-                    <img src="images/user_avatar.svg" alt="account-avatar">
-                    <span class="account-name-span">John Doe</span>
-                </div>
-            </div>
-            <div class="dropdown-body">
-                <div class="dropdown-options">
-                    <div class="dropdown-option" >
-                        <label class="switch-label" for="darkModeToggle">
-                            <i class="fa-duotone fa-solid fa-cog"></i>
-                            <span>Dark mode</span>
-                        </label>
-                        <label class="switch">
-                            <input type="checkbox" id="darkModeToggle" data-type="toggle" data-func="darkmode"/>
-                                <span class="slider"></span>
-                        </label>
-                    </div>
-                </div>
-                <div class="or-divider"></div>
-                <nav class="dropdown-actions">        
-                    <a href="#" class="dropdown-action">
-                        <i class="fa-duotone fa-solid fa-right-from-bracket"></i>
-                        <span class="account-logout-span">Log out</span>
-                    </a>
-                </nav>
-            </div>               
-    </div>
+    @await Html.PartialAsync("Dropdowns/_NotificationsDropdownPartial")
+    @await Html.PartialAsync("Dropdowns/_AccountDropdownPartial")
 </header>

@@ -24,6 +24,26 @@ build_property.EnableCodeStyleSeverity =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvamVjdHMvSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Volumes/T7/Workspace/NETProjects/ASP.NET/Assignment/Alpha/Frontend/WebApp/Views/Shared/Dropdowns/_AccountDropdownPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0Ryb3Bkb3ducy9fQWNjb3VudERyb3Bkb3duUGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Volumes/T7/Workspace/NETProjects/ASP.NET/Assignment/Alpha/Frontend/WebApp/Views/Shared/Dropdowns/_NotificationsDropdownPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0Ryb3Bkb3ducy9fTm90aWZpY2F0aW9uc0Ryb3Bkb3duUGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Volumes/T7/Workspace/NETProjects/ASP.NET/Assignment/Alpha/Frontend/WebApp/Views/Shared/ListItems/_ProjectListItemPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0xpc3RJdGVtcy9fUHJvamVjdExpc3RJdGVtUGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Volumes/T7/Workspace/NETProjects/ASP.NET/Assignment/Alpha/Frontend/WebApp/Views/Shared/Modals/_AddProjectModalPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL01vZGFscy9fQWRkUHJvamVjdE1vZGFsUGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Volumes/T7/Workspace/NETProjects/ASP.NET/Assignment/Alpha/Frontend/WebApp/Views/Shared/Modals/_EditProjectModalPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL01vZGFscy9fRWRpdFByb2plY3RNb2RhbFBhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Volumes/T7/Workspace/NETProjects/ASP.NET/Assignment/Alpha/Frontend/WebApp/Views/Shared/_BackOfficeWrapperLayout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19CYWNrT2ZmaWNlV3JhcHBlckxheW91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

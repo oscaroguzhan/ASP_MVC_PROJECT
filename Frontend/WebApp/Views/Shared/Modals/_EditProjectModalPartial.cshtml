@@ -1,0 +1,110 @@
+﻿<section class="modal" id="edit-project-modal">
+    <div class="card">
+        <div class="card-header">
+            <h3>Edit Project</h3>
+            <button type="button" class="btn-close" data-type="close" data-target="#edit-project-modal"></button>
+        </div>
+
+        <div class="card-body">
+            <form asp-controller="" asp-action="" novalidate method="post" enctype="multipart/form-data">
+                <div class="form-group">
+                    <div id="upload-trigger-2" class="image-preview-container-2 project-image">
+                        <img src="#" alt="" id="image-preview-2" class="hide">
+                        <div id="image-preview-icon-container-2" class="circle circle-gray">
+                            <i id="image-preview-icon-2" class="fa-duotone fa-solid fa-camera "
+                                style="--fa-primary-color: #ffffff;  --fa-secondary-color: #ffffff; "></i>
+
+                        </div>
+                    </div>
+                    <input type="file" id="image-upload-2" accept="image/*">
+
+
+                </div>
+                <div class="form-group">
+                    <label for="" class="form-label">Project Name</label>
+                    <input class="form-input" type="text" name="projectName" id="projectName"
+                        placeholder="Enter project name" />
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Client Name</label>
+                    <div class="form-select-wrapper">
+                        <select class="form-select" name="client" id="client">
+                            <option value="" disabled selected>Select a client</option>
+                            <option data-value="1">Client 1</option>
+                            <option data-value="2">Client 2</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group ">
+                    <label for="" class="form-label description">Description</label>
+                    <textarea id="edit-project-description" class="form-input"></textarea>
+                    <div id="edit-project-description-wysiwyg-editor" class="wysiwyg-editor"></div>
+                    <div id="edit-project-description-wysiwyg-toolbar" class="wysiwyg-toolbar">
+                        <span class="ql-formats">
+                            <button class="ql-bold"></button>
+                            <button class="ql-italic"></button>
+                            <button class="ql-underline"></button>
+                        </span>
+                        <span class="ql-formats">
+                            <button class="ql-align" value=""></button>
+                            <button class="ql-align" value="center"></button>
+                            <button class="ql-align" value="right"></button>
+                            <button class="ql-align" value="justify"></button>
+                        </span>
+                        <span class="ql-formats">
+                            <button class="ql-list" value="bullet"></button>
+                            <button class="ql-list" value="ordered"></button>
+                        </span>
+                        <span class="ql-formats">
+                            <button class="ql-link"></button>
+
+                        </span>
+                    </div>
+                </div>
+
+                <div class="form-horizontal-group">
+                    <div class="form-group">
+                        <label for="" class="form-label">Start Date</label>
+                        <input class="form-input" type="date" />
+                    </div>
+                    <div class="form-group">
+                        <label for="" class="form-label">End Date</label>
+                        <input class="form-input" type="date" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="" class="form-label">Members</label>
+                    <div class="form-select-wrapper">
+                        <select class="form-select" name="member" id="member">
+                            <option value="" disabled selected>Select a member</option>
+                            <option data-value="1">John Doe</option>
+                            <option data-value="2">Jane Doe</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Budget</label>
+                    <div class="form-input-extended">
+                        <i class="fa-duotone fa-solid fa-dollar-sign"></i>
+                        <input class="form-input" type="text" placeholder="0.00" />
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Project Status</label>
+                        <div class="form-select-wrapper">
+                            <select class="form-select" name="client" id="client">
+                                <option value="" disabled selected>Choose a status</option>
+                                <option data-value="1">Started</option>
+                                <option data-value="2">Completed</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn" type="submit">Save</button>
+            </form>
+
+
+        </div>
+        <div class="card-footer"></div>
+    </div>
+</section>
