@@ -18,10 +18,10 @@ public class SignUpViewModel
     [Required(ErrorMessage = "Email is required.")]
     public string Email { get; set; } = string.Empty;
 
-    [Display(Name = "Username", Prompt = "Choose a username")]
-    [Required(ErrorMessage = "Username is required.")]
-    [RegularExpression(@"^[a-zA-Z0-9_]+$", ErrorMessage = "Username can only contain letters, numbers, and underscores.")]
-    [StringLength(20, MinimumLength = 3, ErrorMessage = "Username must be between 3 and 20 characters.")]
+    [Display(Name = "Password", Prompt = "Enter your password")]
+    [Required(ErrorMessage = "Password is required.")]
+    [DataType(DataType.Password)]
+    [StringLength(100, ErrorMessage = "Password must be at least {2} characters long.", MinimumLength = 6)]
     public string Password { get; set; } = string.Empty;
 
     [Display(Name = "Confirm Password", Prompt = "Re-enter your password")]

@@ -31,8 +31,10 @@
                     <div class="form-select-wrapper">
                         <select class="form-select" name="client" id="client">
                             <option value="" disabled selected>Select a client</option>
-                            <option data-value="1">Client 1</option>
-                            <option data-value="2">Client 2</option>
+                            @foreach (var option in Model.Clients)
+                            {
+                                <option value="@option.Value">@option.Text</option>
+                            }
                         </select>
                     </div>
                 </div>
@@ -78,8 +80,10 @@
                     <div class="form-select-wrapper">
                         <select class="form-select" name="member" id="member">
                             <option value="" disabled selected>Select a member</option>
-                            <option data-value="1">John Doe</option>
-                            <option data-value="2">Jane Doe</option>
+                            @foreach (var option in Model.Members)
+                            {
+                                <option value="@option.Value">@option.Text</option>
+                            }
                         </select>
                     </div>
                 </div>
@@ -95,8 +99,10 @@
                         <div class="form-select-wrapper">
                             <select class="form-select" name="client" id="client">
                                 <option value="" disabled selected>Choose a status</option>
-                                <option data-value="1">Started</option>
-                                <option data-value="2">Completed</option>
+                               @foreach (var option in Model.Statuses)
+                                {
+                                    <option value="@option.Value">@option.Text</option>
+                                }
                             </select>
                         </div>
                     </div>

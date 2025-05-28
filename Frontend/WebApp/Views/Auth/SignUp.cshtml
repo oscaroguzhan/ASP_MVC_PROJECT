@@ -10,16 +10,16 @@
             <h1>@ViewData["Title"]  </h1>
         </div>
         <div class="card-body">
-            <form method="post" asp-controller="SignUp" asp-action="ExternalSignUp" novalidate>
+            <form method="post" asp-controller="ExternalAuth" asp-action="Index"  novalidate>
                 <button class="btn-external" type="submit">
-                    <img src="images/google-icon.svg" alt="icon" />
+                    <img src="/images/google-icon.svg" alt="icon" />
                     <span class="external-span">Sign up with Google</span>
                 </button>
             </form>
             <div class="or-divider">
                 or
             </div>
-            <form method="post" asp-controller="SignUp" asp-action="Index" novalidate>
+            <form method="post" asp-controller="Auth" asp-action="SignUp" novalidate>
                 <div class="form-group">
                     <label class="form-label"  asp-for="FirstName"></label>
                     <input class="form-input" asp-for="FirstName" />
@@ -57,7 +57,7 @@
                     </button>
             </form>
             <div class="card-footer">
-                Already have an account? <a asp-controller="Login" asp-action="Index">Log in</a>
+                Already have an account? <a asp-controller="Auth" asp-action="Login">Log in</a>
             </div>
         </div>
 </section>

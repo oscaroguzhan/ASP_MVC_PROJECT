@@ -1,0 +1,51 @@
+﻿@model LoginViewModel
+@{
+    Layout = "_CenterWrapperLayout";
+    ViewData["Title"] = "Login";
+}
+
+
+<section id="login">
+    <div class="card">
+        <div class="card-header">
+            <h1>@ViewData["Title"]</h1>
+        </div>
+        <div class="card-body">
+            <form method="post" asp-controller="ExternalAuth" asp-action="Index" novalidate>
+                <button class="btn-external" type="submit">
+                    <img src="/images/google-icon.svg" alt="icon" />
+                    <span class="external-span">Log in in with Google</span>
+                </button>
+            </form>
+            <div class="or-divider">
+                or
+            </div>
+            <form method="post" asp-controller="Auth" asp-action="Login" novalidate>
+
+                <div class="form-group">
+                    <label class="form-label"  asp-for="Email"></label>
+                    <input class="form-input" asp-for="Email" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label class="form-label"  asp-for="Password"></label>
+                    <input class="form-input" asp-for="Password" />
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+
+                <div class="form-checkbox-group">
+                        <label for="" class="form-checkbox">
+                            <input asp-for="IsPersistent" class="form-checkbox-input" />
+                            <span class="form-checkbox-custom"></span>
+                        </label>
+                        <label asp-for="IsPersistent" class="form-label" > Remember me</label>
+                    </div>
+                <button class="btn" type="submit">
+                    <span class="btn-span">Log in</span>
+                </button>
+            </form>
+            <div class="card-footer">
+                Don't have an account? <a asp-controller="Auth" asp-action="SignUp">Sign up</a>
+            </div>
+        </div>
+</section>

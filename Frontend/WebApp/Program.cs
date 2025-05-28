@@ -14,5 +14,12 @@ app.MapControllerRoute(
     pattern: "{controller=Projects}/{action=Index}/{id?}")
     .WithStaticAssets();
 
+// Redirect root URL to /auth/login
+app.MapGet("/", context =>
+{
+    context.Response.Redirect("/auth/login");
+    return Task.CompletedTask;
+});
+
 
 app.Run();

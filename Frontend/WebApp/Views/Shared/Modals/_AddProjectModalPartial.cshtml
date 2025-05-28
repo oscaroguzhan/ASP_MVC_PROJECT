@@ -1,85 +1,87 @@
 ﻿@model AddProjectViewModel
 <section class="modal" id="add-project-modal">
-    <div class="card">
-        <div class="card-header">
-            <h3>Add Project</h3>
-            <button type="button" class="btn-close" data-type="close" data-target="#add-project-modal"></button>
-        </div>
+        <div class="card">
+            <div class="card-header">
+                <h3>Add Project</h3>
+                <button type="button" class="btn-close" data-type="close" data-target="#add-project-modal"></button>
+            </div>
 
-        <div class="card-body">
-            <form asp-controller="" asp-action="" novalidate method="post" enctype="multipart/form-data">
-                <div class="form-group">
-                    <div id="upload-trigger-1" class="image-preview-container project-image">
-                        <img src="#" alt="" id="image-preview" class="hide">
-                        <div id="image-preview-icon-container" class="circle circle-gray">
-                            <i id="image-preview-icon" class="fa-duotone fa-solid fa-camera "
-                                style="--fa-primary-color: #ffffff;  --fa-secondary-color: #ffffff; "></i>
+            <div class="card-body">
+                <form asp-controller="" asp-action="" novalidate method="post" enctype="multipart/form-data">
+                     <div class="form-group">
+                        <div id="upload-trigger-1" class="image-preview-container project-image">
+                            <img src="#" alt="" id="image-preview" class="hide">
+                            <div id="image-preview-icon-container" class="circle circle-gray" >
+                              <i id="image-preview-icon" class="fa-duotone fa-solid fa-camera " style="--fa-primary-color: #ffffff;  --fa-secondary-color: #ffffff; "></i>
+                              
+                            </div>
+                        </div>
+                        <input type="file" id="image-upload" accept="image/*" >
 
+                        
+                    </div>
+                    <div class="form-group">
+                        <label for="" class="form-label">Project Name</label>
+                        <input class="form-input" type="text" name="projectName" id="projectName" placeholder="Enter project name"/>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Client Name</label>
+                        <div class="form-select-wrapper">
+                            <select class="form-select" name="client" id="client">
+                                <option value="" disabled selected>Select a client</option>
+                                @foreach (var option in Model.Clients)
+                                {
+                                    <option value="@option.Value">@option.Text</option>
+                                }
+                            </select>
                         </div>
                     </div>
-                    <input type="file" id="image-upload" accept="image/*">
-
-
-                </div>
-                <div class="form-group">
-                    <label for="" class="form-label">Project Name</label>
-                    <input class="form-input" type="text" name="projectName" id="projectName"
-                        placeholder="Enter project name" />
-                </div>
-                <div class="form-group">
-                    <label class="form-label">Client Name</label>
-                    <div class="form-select-wrapper">
-                        <select class="form-select" name="client" id="client">
-                            <option value="" disabled selected>Select a client</option>
-                            <option data-value="1">Client 1</option>
-                            <option data-value="2">Client 2</option>
-                        </select>
+                    <div class="form-group ">
+                        <label for="" class="form-label description">Description</label>
+                        <textarea id="add-project-description" class="form-input"></textarea>
+                        <div id="add-project-description-wysiwyg-editor" class="wysiwyg-editor"></div>
+                        <div id="add-project-description-wysiwyg-toolbar" class="wysiwyg-toolbar">
+                            <span class="ql-formats">
+                                <button class="ql-bold"></button>
+                                <button class="ql-italic"></button>
+                                <button class="ql-underline"></button>
+                            </span>
+                            <span class="ql-formats">
+                                <button class="ql-align" value=""></button>
+                                <button class="ql-align" value="center"></button>
+                                <button class="ql-align" value="right"></button>
+                                <button class="ql-align" value="justify"></button>
+                            </span>
+                            <span class="ql-formats">
+                                <button class="ql-list" value="bullet"></button>
+                                <button class="ql-list" value="ordered"></button>
+                            </span>
+                            <span class="ql-formats">
+                                <button class="ql-link"></button>
+                                
+                            </span>
+                        </div>
                     </div>
-                </div>
-                <div class="form-group ">
-                    <label for="" class="form-label description">Description</label>
-                    <textarea id="add-project-description" class="form-input"></textarea>
-                    <div id="add-project-description-wysiwyg-editor" class="wysiwyg-editor"></div>
-                    <div id="add-project-description-wysiwyg-toolbar" class="wysiwyg-toolbar">
-                        <span class="ql-formats">
-                            <button class="ql-bold"></button>
-                            <button class="ql-italic"></button>
-                            <button class="ql-underline"></button>
-                        </span>
-                        <span class="ql-formats">
-                            <button class="ql-align" value=""></button>
-                            <button class="ql-align" value="center"></button>
-                            <button class="ql-align" value="right"></button>
-                            <button class="ql-align" value="justify"></button>
-                        </span>
-                        <span class="ql-formats">
-                            <button class="ql-list" value="bullet"></button>
-                            <button class="ql-list" value="ordered"></button>
-                        </span>
-                        <span class="ql-formats">
-                            <button class="ql-link"></button>
 
-                        </span>
-                    </div>
-                </div>
-
-                <div class="form-horizontal-group">
-                    <div class="form-group">
-                        <label for="" class="form-label">Start Date</label>
-                        <input class="form-input" type="date" />
+                    <div class="form-horizontal-group">
+                        <div class="form-group">
+                            <label for="" class="form-label">Start Date</label>
+                            <input class="form-input" type="date" />
+                        </div>
+                        <div class="form-group">
+                            <label for="" class="form-label">End Date</label>
+                            <input class="form-input" type="date" />
+                        </div>
                     </div>
                     <div class="form-group">
-                        <label for="" class="form-label">End Date</label>
-                        <input class="form-input" type="date" />
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="" class="form-label">Members</label>
-                    <div class="form-select-wrapper">
-                        <select class="form-select" name="member" id="member">
-                            <option value="" disabled selected>Select a member</option>
-                            <option data-value="1">John Doe</option>
-                            <option data-value="2">Jane Doe</option>
+                        <label for="" class="form-label">Members</label>
+                        <div class="form-select-wrapper">
+                            <select class="form-select" name="member" id="member">
+                                <option value="" disabled selected>Select a member</option>
+                               @foreach (var option in Model.Members)
+                                {
+                                    <option value="@option.Value">@option.Text</option>
+                                }
                         </select>
                     </div>
                 </div>
